@@ -23,9 +23,8 @@ const OrderComponent = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const orderData = { ...formData, quantity, subtotal: parseFloat(subtotal) };
-
         try {
-            const response = await fetch('http://localhost:5000/api/orders', {
+            const response = await fetch('https://sekendfirstdatabasebacend.onrender.com/api/orders', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
